@@ -20,6 +20,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        updateView(_paymentService.getDeposit());
+
         this.<Button>findViewById(R.id.Deposit10CentButton).setOnClickListener(v -> deposit(10));
         this.<Button>findViewById(R.id.Deposit20CentButton).setOnClickListener(v -> deposit(20));
         this.<Button>findViewById(R.id.Deposit50CentButton).setOnClickListener(v -> deposit(50));

@@ -19,6 +19,11 @@ public class PaymentServiceImpl implements IPaymentService {
     }
 
     @Override
+    public int getDeposit() {
+        return _sharedPreferences.getInt("cents", 0);
+    }
+
+    @Override
     public void deposit(int cent) {
         updateValue(getCents() + cent);
     }

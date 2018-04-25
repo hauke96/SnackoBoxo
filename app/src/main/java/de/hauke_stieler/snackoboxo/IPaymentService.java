@@ -9,6 +9,8 @@ import juard.event.DataEvent;
 public interface IPaymentService {
     DataEvent<Integer> DepositChangedEvent = new DataEvent<>();
 
+    int getDeposit();
+
     void deposit(int cent);
 
     void buy(int cent);
