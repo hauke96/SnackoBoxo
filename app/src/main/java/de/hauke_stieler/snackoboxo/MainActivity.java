@@ -11,8 +11,12 @@ import java.text.MessageFormat;
 
 public class MainActivity extends AppCompatActivity {
 
+    SharedPreferences _valuePreference;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        _valuePreference = getSharedPreferences(getString(R.string.app_name), MODE_PRIVATE);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -32,36 +36,30 @@ public class MainActivity extends AppCompatActivity {
     private void pay(int cent) {
         Log.d("PAY", MessageFormat.format("{0} cent", cent));
 
-        SharedPreferences valuePreference = getSharedPreferences(getString(R.string.app_name), MODE_PRIVATE);
+        int oldCents = _valuePreference.getInt("cents", 0);
+        Log.d("PAY", "old value: " + oldCents);
 
-        int oldCents = valuePreference.getInt("cents", 0);
-        Log.d("PAY", "old value: "+oldCents);
-
-        int newCents = oldCents+cent;
-
-        updateValue(valuePreference, newCents);
+        updateValue(oldCents + cent);
     }
 
     private void buy(int cent) {
         Log.d("BUY", MessageFormat.format("{0} cent", cent));
 
-        SharedPreferences valuePreference = getSharedPreferences(getString(R.string.app_name), MODE_PRIVATE);
+        int oldCents = _valuePreference.getInt("cents", 0);
+        Log.d("BUY", "old value: " + oldCents);
 
-        int oldCents = valuePreference.getInt("cents", 0);
-        Log.d("BUY", "old value: "+oldCents);
-
-        int newCents = oldCents-cent;
-
-        updateValue(valuePreference, newCents);
+        updateValue(oldCents - cent);
     }
 
-    private void updateValue(SharedPreferences valuePreference, int newCents) {
-        valuePreference.edit().putInt("cents", newCents).commit();
+    private void updateValue(int newCents) {
+        Log.d("UPDATE VALUE", "new value: " + newCents);
+
+        _valuePreference.edit().putInt("cents", newCents).commit();
 
         updateView(newCents);
     }
 
     private void updateView(int cent) {
-        this.<TextView>findViewById(R.id.CurrentValueLabel).setText(String.format("%.2f €", ((float)cent/100.0f)));
+        this.<TextView>findViewById(R.id.CurrentValueLabel).setText(String.format("%.2f €", ((float) cent / 100.0f)));
     }
 }
