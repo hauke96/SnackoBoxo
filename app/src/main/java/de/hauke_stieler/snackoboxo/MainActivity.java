@@ -1,10 +1,11 @@
 package de.hauke_stieler.snackoboxo;
 
-import android.support.v7.app.AppCompatActivity;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import java.text.MessageFormat;
 
@@ -28,11 +29,39 @@ public class MainActivity extends AppCompatActivity {
         this.<Button>findViewById(R.id.BuyFor2EuroButton).setOnClickListener(v -> buy(200));
     }
 
-    private void pay(int cent){
+    private void pay(int cent) {
         Log.d("PAY", MessageFormat.format("{0} cent", cent));
+
+        SharedPreferences valuePreference = getSharedPreferences(getString(R.string.app_name), MODE_PRIVATE);
+
+        int oldCents = valuePreference.getInt("cents", 0);
+        Log.d("PAY", "old value: "+oldCents);
+
+        int newCents = oldCents+cent;
+
+        updateValue(valuePreference, newCents);
     }
 
-    private void buy(int cent){
+    private void buy(int cent) {
         Log.d("BUY", MessageFormat.format("{0} cent", cent));
+
+        SharedPreferences valuePreference = getSharedPreferences(getString(R.string.app_name), MODE_PRIVATE);
+
+        int oldCents = valuePreference.getInt("cents", 0);
+        Log.d("BUY", "old value: "+oldCents);
+
+        int newCents = oldCents-cent;
+
+        updateValue(valuePreference, newCents);
+    }
+
+    private void updateValue(SharedPreferences valuePreference, int newCents) {
+        valuePreference.edit().putInt("cents", newCents).commit();
+
+        updateView(newCents);
+    }
+
+    private void updateView(int cent) {
+        this.<TextView>findViewById(R.id.CurrentValueLabel).setText(String.format("%.2f €", ((float)cent/100.0f)));
     }
 }
