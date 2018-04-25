@@ -10,6 +10,8 @@ import juard.contract.Contract;
  */
 
 public class PaymentServiceImpl implements IPaymentService {
+    public static final String DEPOSIT_KEY = "cents";
+
     private SharedPreferences _sharedPreferences;
 
     public PaymentServiceImpl(SharedPreferences preferences) {
@@ -20,27 +22,23 @@ public class PaymentServiceImpl implements IPaymentService {
 
     @Override
     public int getDeposit() {
-        return _sharedPreferences.getInt("cents", 0);
+        return _sharedPreferences.getInt(DEPOSIT_KEY, 0);
     }
 
     @Override
     public void deposit(int cent) {
-        updateValue(getCents() + cent);
+        updateValue(getDeposit() + cent);
     }
 
     @Override
     public void buy(int cent) {
-        updateValue(getCents() - cent);
-    }
-
-    private int getCents() {
-        return _sharedPreferences.getInt("cents", 0);
+        updateValue(getDeposit() - cent);
     }
 
     private void updateValue(int newCents) {
         Log.d("UPDATE VALUE", "new value: " + newCents);
 
-        _sharedPreferences.edit().putInt("cents", newCents).commit();
+        _sharedPreferences.edit().putInt(DEPOSIT_KEY, newCents).commit();
 
         DepositChangedEvent.fireEvent(newCents);
     }
