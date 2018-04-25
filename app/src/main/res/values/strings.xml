@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">SnackoBoxo</string>
+    <string name="deposit">Eingezahlt habe ich ...</string>
+    <string name="current_deposit">Aktueller Betrag:</string>
+    <string name="buy">Süßigkeit entnommen habe ich für ...</string>
 </resources>
