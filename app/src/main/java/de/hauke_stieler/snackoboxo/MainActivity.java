@@ -6,6 +6,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.Button;
 import android.widget.TextView;
 
+/**
+ * Created by hauke on 25.04.18.
+ *
+ * The app has only this activity, that's why it's called "MainActivity" ;)
+ */
 public class MainActivity extends AppCompatActivity {
 
     IPaymentService _paymentService;

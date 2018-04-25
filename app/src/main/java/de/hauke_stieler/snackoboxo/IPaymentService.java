@@ -4,6 +4,8 @@ import juard.event.DataEvent;
 
 /**
  * Created by hauke on 25.04.18.
+ *
+ * This will persist the deposit and offers an interface to change it.
  */
 
 public interface IPaymentService {

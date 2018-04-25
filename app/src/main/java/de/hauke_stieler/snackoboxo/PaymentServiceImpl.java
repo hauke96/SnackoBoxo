@@ -7,6 +7,8 @@ import juard.contract.Contract;
 
 /**
  * Created by hauke on 25.04.18.
+ *
+ * This implementation of the payment service uses the shared preferences of the phone.
  */
 
 public class PaymentServiceImpl implements IPaymentService {
