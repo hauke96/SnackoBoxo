@@ -2,8 +2,11 @@ package de.hauke_stieler.snackoboxo;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+
+import java.text.MessageFormat;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -26,10 +29,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void pay(int cent){
-
+        Log.d("PAY", MessageFormat.format("{0} cent", cent));
     }
 
     private void buy(int cent){
-
+        Log.d("BUY", MessageFormat.format("{0} cent", cent));
     }
 }
