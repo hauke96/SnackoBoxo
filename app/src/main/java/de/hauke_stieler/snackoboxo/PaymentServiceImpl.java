@@ -37,6 +37,6 @@ public class PaymentServiceImpl implements IPaymentService {
 
         _sharedPreferences.edit().putInt("cents", newCents).commit();
 
-        ValueChangedEvent.fireEvent(newCents);
+        DepositChangedEvent.fireEvent(newCents);
     }
 }

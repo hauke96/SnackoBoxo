@@ -1,7 +1,5 @@
 package de.hauke_stieler.snackoboxo;
 
-import android.content.SharedPreferences;
-
 import juard.event.DataEvent;
 
 /**
@@ -9,7 +7,7 @@ import juard.event.DataEvent;
  */
 
 public interface IPaymentService {
-    DataEvent<Integer> ValueChangedEvent = new DataEvent<>();
+    DataEvent<Integer> DepositChangedEvent = new DataEvent<>();
 
     void deposit(int cent);
 

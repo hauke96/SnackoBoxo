@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences sharedPreference = getSharedPreferences(getString(R.string.app_name), MODE_PRIVATE);
 
         _paymentService = new PaymentServiceImpl(sharedPreference);
-        _paymentService.ValueChangedEvent.add(value -> updateView(value));
+        _paymentService.DepositChangedEvent.add(value -> updateView(value));
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
