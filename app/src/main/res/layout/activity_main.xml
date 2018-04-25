@@ -3,19 +3,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
     android:background="@color/colorSecondary"
+    android:orientation="horizontal"
     tools:context="de.hauke_stieler.snackoboxo.MainActivity">
 
     <RelativeLayout
-        android:id="@+id/PayButtonsLayout"
+        android:id="@+id/DepositButtonsLayout"
         android:layout_width="150dp"
         android:layout_height="match_parent"
         android:layout_alignParentLeft="true"
         android:background="@color/colorPrimaryDark">
 
         <TextView
-            android:id="@+id/PayInfoLabel"
+            android:id="@+id/DepositInfoLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
@@ -34,35 +34,35 @@
             android:paddingHorizontal="10dp">
 
             <Button
-                android:id="@+id/Pay10CentButton"
+                android:id="@+id/Deposit10CentButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="5dp"
                 android:text="+ 0,10 €" />
 
             <Button
-                android:id="@+id/Pay20CentButton"
+                android:id="@+id/Deposit20CentButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="5dp"
                 android:text="+ 0,20 €" />
 
             <Button
-                android:id="@+id/Pay50CentButton"
+                android:id="@+id/Deposit50CentButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="5dp"
                 android:text="+ 0,50 €" />
 
             <Button
-                android:id="@+id/Pay1EuroButton"
+                android:id="@+id/Deposit1EuroButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="5dp"
                 android:text="+ 1,00 €" />
 
             <Button
-                android:id="@+id/Pay2EuroButton"
+                android:id="@+id/Deposit2EuroButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="5dp"
@@ -76,9 +76,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_centerVertical="true"
-        android:layout_toEndOf="@+id/PayButtonsLayout"
+        android:layout_toEndOf="@+id/DepositButtonsLayout"
         android:layout_toLeftOf="@+id/BuyForButtonsLayout"
-        android:layout_toRightOf="@+id/PayButtonsLayout"
+        android:layout_toRightOf="@+id/DepositButtonsLayout"
         android:layout_toStartOf="@+id/BuyForButtonsLayout">
 
         <RelativeLayout

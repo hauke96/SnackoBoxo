@@ -3,11 +3,8 @@ package de.hauke_stieler.snackoboxo;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.widget.Button;
 import android.widget.TextView;
-
-import java.text.MessageFormat;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,11 +20,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        this.<Button>findViewById(R.id.Pay10CentButton).setOnClickListener(v -> pay(10));
-        this.<Button>findViewById(R.id.Pay20CentButton).setOnClickListener(v -> pay(20));
-        this.<Button>findViewById(R.id.Pay50CentButton).setOnClickListener(v -> pay(50));
-        this.<Button>findViewById(R.id.Pay1EuroButton).setOnClickListener(v -> pay(100));
-        this.<Button>findViewById(R.id.Pay2EuroButton).setOnClickListener(v -> pay(200));
+        this.<Button>findViewById(R.id.Deposit10CentButton).setOnClickListener(v -> deposit(10));
+        this.<Button>findViewById(R.id.Deposit20CentButton).setOnClickListener(v -> deposit(20));
+        this.<Button>findViewById(R.id.Deposit50CentButton).setOnClickListener(v -> deposit(50));
+        this.<Button>findViewById(R.id.Deposit1EuroButton).setOnClickListener(v -> deposit(100));
+        this.<Button>findViewById(R.id.Deposit2EuroButton).setOnClickListener(v -> deposit(200));
 
         this.<Button>findViewById(R.id.BuyFor10CentButton).setOnClickListener(v -> buy(10));
         this.<Button>findViewById(R.id.BuyFor20CentButton).setOnClickListener(v -> buy(20));
@@ -36,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         this.<Button>findViewById(R.id.BuyFor2EuroButton).setOnClickListener(v -> buy(200));
     }
 
-    private void pay(int cent) {
+    private void deposit(int cent) {
         _paymentService.deposit(cent);
     }
 
