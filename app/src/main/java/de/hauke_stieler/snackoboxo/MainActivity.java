@@ -11,11 +11,14 @@ import java.text.MessageFormat;
 
 public class MainActivity extends AppCompatActivity {
 
-    SharedPreferences _valuePreference;
+    IPaymentService _paymentService;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        _valuePreference = getSharedPreferences(getString(R.string.app_name), MODE_PRIVATE);
+        SharedPreferences sharedPreference = getSharedPreferences(getString(R.string.app_name), MODE_PRIVATE);
+
+        _paymentService = new PaymentServiceImpl(sharedPreference);
+        _paymentService.ValueChangedEvent.add(value -> updateView(value));
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -34,29 +37,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void pay(int cent) {
-        Log.d("PAY", MessageFormat.format("{0} cent", cent));
-
-        int oldCents = _valuePreference.getInt("cents", 0);
-        Log.d("PAY", "old value: " + oldCents);
-
-        updateValue(oldCents + cent);
+        _paymentService.deposit(cent);
     }
 
     private void buy(int cent) {
-        Log.d("BUY", MessageFormat.format("{0} cent", cent));
-
-        int oldCents = _valuePreference.getInt("cents", 0);
-        Log.d("BUY", "old value: " + oldCents);
-
-        updateValue(oldCents - cent);
-    }
-
-    private void updateValue(int newCents) {
-        Log.d("UPDATE VALUE", "new value: " + newCents);
-
-        _valuePreference.edit().putInt("cents", newCents).commit();
-
-        updateView(newCents);
+        _paymentService.buy(cent);
     }
 
     private void updateView(int cent) {
