@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context="de.hauke_stieler.snackoboxo.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/PayButtonsLayout"
+        android:layout_width="120dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:background="@color/colorPrimary">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="vertical"
+            android:paddingHorizontal="10dp">
+
+            <Button
+                android:id="@+id/Pay10CentButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:text="+ 0,10 €" />
+
+            <Button
+                android:id="@+id/Pay20CentButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:text="+ 0,20 €" />
+
+            <Button
+                android:id="@+id/Pay50CentButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:text="+ 0,50 €" />
+
+            <Button
+                android:id="@+id/Pay1EuroButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:text="+ 1,00 €" />
+
+            <Button
+                android:id="@+id/Pay2EuroButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:text="+ 2,00 €" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/PayButtonsLayout"
+        android:layout_toLeftOf="@+id/BuyForButtonsLayout"
+        android:layout_toRightOf="@+id/PayButtonsLayout"
+        android:layout_toStartOf="@+id/BuyForButtonsLayout">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/ValueLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:text="Aktueller Betrag:" />
+
+            <TextView
+                android:id="@+id/CurrentValueLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ValueLabel"
+                android:layout_centerHorizontal="true"
+                android:text="TextView" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/BuyForButtonsLayout"
+        android:layout_width="120dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:background="@color/colorPrimary">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="vertical"
+            android:paddingHorizontal="10dp">
+
+            <Button
+                android:id="@+id/BuyFor10CentButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:text="0,10 €" />
+
+            <Button
+                android:id="@+id/BuyFor20CentButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:text="0,20 €" />
+
+            <Button
+                android:id="@+id/BuyFor50CentButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:text="0,50 €" />
+
+            <Button
+                android:id="@+id/BuyFor1EuroButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:text="1,00 €" />
+
+            <Button
+                android:id="@+id/BuyFor2EuroButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:text="2,00 €" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
