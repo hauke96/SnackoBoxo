@@ -1,3 +1,4 @@
+<img width=150 align="right" src="app/src/main/res/drawable/snackoboxo_logo.png"/>
 # SnackoBoxo
 A simple app for snack boxes to remember how much "deposit" you have
 
