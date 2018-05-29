@@ -29,13 +29,17 @@ public class MainActivity extends AppCompatActivity {
 
         this.<Button>findViewById(R.id.Deposit10CentButton).setOnClickListener(v -> deposit(10));
         this.<Button>findViewById(R.id.Deposit20CentButton).setOnClickListener(v -> deposit(20));
+        this.<Button>findViewById(R.id.Deposit40CentButton).setOnClickListener(v -> deposit(40));
         this.<Button>findViewById(R.id.Deposit50CentButton).setOnClickListener(v -> deposit(50));
+        this.<Button>findViewById(R.id.Deposit80CentButton).setOnClickListener(v -> deposit(80));
         this.<Button>findViewById(R.id.Deposit1EuroButton).setOnClickListener(v -> deposit(100));
         this.<Button>findViewById(R.id.Deposit2EuroButton).setOnClickListener(v -> deposit(200));
 
         this.<Button>findViewById(R.id.BuyFor10CentButton).setOnClickListener(v -> buy(10));
         this.<Button>findViewById(R.id.BuyFor20CentButton).setOnClickListener(v -> buy(20));
+        this.<Button>findViewById(R.id.BuyFor40CentButton).setOnClickListener(v -> buy(40));
         this.<Button>findViewById(R.id.BuyFor50CentButton).setOnClickListener(v -> buy(50));
+        this.<Button>findViewById(R.id.BuyFor80CentButton).setOnClickListener(v -> buy(80));
         this.<Button>findViewById(R.id.BuyFor1EuroButton).setOnClickListener(v -> buy(100));
         this.<Button>findViewById(R.id.BuyFor2EuroButton).setOnClickListener(v -> buy(200));
     }

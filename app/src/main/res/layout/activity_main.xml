@@ -48,11 +48,25 @@
                 android:text="+ 0,20 €" />
 
             <Button
+                android:id="@+id/Deposit40CentButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:text="+ 0,40 €" />
+
+            <Button
                 android:id="@+id/Deposit50CentButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="5dp"
                 android:text="+ 0,50 €" />
+
+            <Button
+                android:id="@+id/Deposit80CentButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:text="+ 0,80 €" />
 
             <Button
                 android:id="@+id/Deposit1EuroButton"
@@ -149,11 +163,25 @@
                 android:text="- 0,20 €" />
 
             <Button
+                android:id="@+id/BuyFor40CentButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:text="- 0,40 €" />
+
+            <Button
                 android:id="@+id/BuyFor50CentButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="5dp"
                 android:text="- 0,50 €" />
+
+            <Button
+                android:id="@+id/BuyFor80CentButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:text="- 0,80 €" />
 
             <Button
                 android:id="@+id/BuyFor1EuroButton"
