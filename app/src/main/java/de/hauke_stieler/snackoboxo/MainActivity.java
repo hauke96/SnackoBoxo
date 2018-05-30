@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         _moneyValues.add(100);
         _moneyValues.add(200);
 
-        _buttonLayoutParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        _buttonLayoutParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         _buttonLayoutParams.setMargins(0, toPx(5), 0, toPx(5));
 
         super.onCreate(savedInstanceState);
