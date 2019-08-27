@@ -14,7 +14,7 @@ SnackoBoxo helps you to keep track on how much credit/dept you have (because nob
 ## Download
 Unfortunately this app is not available in an app-store yet.
 
-Download: [snackoboxo-release-v0.1.0.apk](https://hauke-stieler.de/public/snackoboxo-release-v0.1.0.apk)
+Download: [snackoboxo-release-v0.1.0.apk](https://hauke-stieler.de/public/snackoboxo/snackoboxo-release-v0.1.0.apk)
 
 # Screenshot
 <img width=400 src="screenshot.png"/>
