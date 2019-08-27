@@ -11,6 +11,11 @@ You either have to put in more than neede or less and pay it back later.
 
 SnackoBoxo helps you to keep track on how much credit/dept you have (because nobody can remember it after a few days/beer).
 
+## Download
+Unfortunately this app is not available in an app-store yet.
+
+Download: [snackoboxo-release-v0.1.0.apk](https://hauke-stieler.de/public/snackoboxo-release-v0.1.0.apk)
+
 # Screenshot
 <img width=400 src="screenshot.png"/>
 
